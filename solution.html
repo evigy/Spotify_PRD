@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Spotify PRD Case Study — Solution & PRD</title>
+  <meta name="description" content="Proposed MVP, user flow, success metrics, tradeoffs, and rollout plan for a lightweight Spotify discovery feature." />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html" aria-label="Home">
+        <span class="logo-dot" aria-hidden="true"></span>
+        <span>
+          <span class="brand-title">Spotify PRD Case Study</span>
+          <span class="brand-sub">Solution & PRD</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a data-nav href="./index.html">Overview</a>
+        <a data-nav href="./research.html">Research</a>
+        <a data-nav href="./solution.html">Solution & PRD</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="hero" aria-label="Solution hero">
+      <div class="hero-inner">
+        <div>
+          <div class="kicker">
+            <span class="pill">MVP proposal</span>
+            <span>low friction • measurable • A/B testable</span>
+          </div>
+
+          <h1>Quick Explore: discovery in bite-sized clusters.</h1>
+          <p class="lede">
+            A lightweight Home surface that lets users sample new music in 3–5 track “mini-clusters,” with simple
+            feedback to build trust and improve personalization over time.
+          </p>
+
+          <div class="divider"></div>
+
+          <div class="callout">
+            <h3>One-sentence pitch</h3>
+            <p>
+              <strong>Quick Explore</strong> helps users try new music without committing to full playlists by offering
+              instant-play mini clusters and clear feedback controls.
+            </p>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="MVP quick specs">
+          <h3>MVP at a glance</h3>
+          <p>UX-first change that works with existing recommendation systems.</p>
+
+          <div class="meta-grid" style="margin-top:12px;">
+            <div class="meta">
+              <span class="label">Surface</span>
+              <span class="value">Home → For You</span>
+            </div>
+            <div class="meta">
+              <span class="label">Unit</span>
+              <span class="value">3–5 track cluster</span>
+            </div>
+            <div class="meta">
+              <span class="label">Feedback</span>
+              <span class="value">👍 / 👎</span>
+            </div>
+            <div class="meta">
+              <span class="label">Experiment</span>
+              <span class="value">A/B rollout</span>
+            </div>
+          </div>
+
+          <div class="divider"></div>
+
+          <div class="cta-row">
+            <a class="button" href="./research.html">← Research</a>
+            <a class="button primary" href="./index.html">Back to Overview</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid-2">
+        <article class="card">
+          <h2>PRD goals & metrics</h2>
+          <p>Increase discovery engagement while reducing decision fatigue.</p>
+          <div class="divider"></div>
+          <div class="kpi-grid" aria-label="Success metrics">
+            <div class="kpi">
+              <div class="num">+10–15%</div>
+              <span class="lbl">Discovery engagement (saves, likes, follows)</span>
+            </div>
+            <div class="kpi">
+              <div class="num">+8%</div>
+              <span class="lbl">New artist saves per user</span>
+            </div>
+            <div class="kpi">
+              <div class="num">+5%</div>
+              <span class="lbl">Weekly listening time from discovery sessions</span>
+            </div>
+            <div class="kpi">
+              <div class="num">↓</div>
+              <span class="lbl">Skip rate inside discovery clusters</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>Non-goals</h2>
+          <ul>
+            <li>Building new recommendation algorithms</li>
+            <li>Replacing Discover Weekly / Release Radar</li>
+            <li>Adding social sharing</li>
+            <li>Artist-side tools or content ops changes</li>
+          </ul>
+          <p class="small" style="margin-top:12px;">
+            This keeps the work scoped to an APM-appropriate UX feature with measurable outcomes.
+          </p>
+        </article>
+      </div>
+
+      <article class="card">
+        <h2>Feature details (MVP scope)</h2>
+        <div class="grid-2" style="margin-top:12px;">
+          <div class="card" style="margin:0;">
+            <h3>Included</h3>
+            <ul>
+              <li>Home card placement (“Quick Explore”)</li>
+              <li>Mini clusters (3–5 tracks) with one-tap play</li>
+              <li>Simple feedback: <strong>👍 More like this</strong> / <strong>👎 Not my vibe</strong></li>
+              <li>Genre/mood labeling for transparency</li>
+            </ul>
+          </div>
+          <div class="card" style="margin:0;">
+            <h3>Excluded (for MVP)</h3>
+            <ul>
+              <li>Saving clusters as playlists</li>
+              <li>Share-to-friends</li>
+              <li>Deep preference controls (sliders, questionnaires)</li>
+              <li>Multi-step onboarding changes</li>
+            </ul>
+          </div>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>User flow</h2>
+        <p>
+          The design reduces cognitive load by eliminating upfront choices. The user doesn’t have to “pick a playlist”
+          — they just tap and sample.
+        </p>
+        <div class="divider"></div>
+        <ul>
+          <li>User opens Spotify Home</li>
+          <li>Sees <strong>Quick Explore</strong> card in “For You”</li>
+          <li>Taps card → cluster auto-plays immediately</li>
+          <li>User can react <strong>👍</strong> or <strong>👎</strong></li>
+          <li>Feedback softly influences future clusters</li>
+        </ul>
+      </article>
+
+      <div class="grid-2">
+        <article class="card">
+          <h2>Tradeoffs</h2>
+          <ul>
+            <li><strong>Less depth</strong> than full playlists — acceptable for low-commitment exploration</li>
+            <li>Potential overlap with existing discovery — mitigated by careful placement and measurement</li>
+            <li>Requires clarity to avoid Home feed clutter</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Risks & mitigations</h2>
+          <ul>
+            <li><strong>Low engagement:</strong> A/B test placement, copy, and cluster length</li>
+            <li><strong>Feedback misuse:</strong> use soft weighting (not hard bans) early on</li>
+            <li><strong>Recommendation trust:</strong> add transparent labels (“Because you listen to…”) in later iterations</li>
+          </ul>
+        </article>
+      </div>
+
+      <article class="card">
+        <h2>Launch plan</h2>
+        <div class="grid-2" style="margin-top:12px;">
+          <div class="card" style="margin:0;">
+            <h3>Phase 1 — Internal dogfood</h3>
+            <ul>
+              <li>Validate UX comprehension and friction</li>
+              <li>Confirm clusters feel “quick” and enjoyable</li>
+              <li>Collect qualitative feedback + instrumentation sanity checks</li>
+            </ul>
+          </div>
+          <div class="card" style="margin:0;">
+            <h3>Phase 2 — 5–10% A/B test</h3>
+            <ul>
+              <li>Measure saves/likes/follows + listening time</li>
+              <li>Compare skip rate to other discovery surfaces</li>
+              <li>Iterate on placement + cluster themes</li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="card" style="margin:0;">
+          <h3>Phase 3 — Gradual rollout</h3>
+          <ul>
+            <li>Expand genres/moods based on performance</li>
+            <li>Introduce time-based clusters (Morning / Focus / Evening)</li>
+            <li>Refine feedback language and transparency</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="callout">
+        <p>
+          <strong>Spotify Discovery PRD</strong> — Authored a PRD addressing playlist discovery fatigue, synthesizing insights from 10 user interviews and defining success metrics, non-goals, and a scoped MVP (“Quick Explore”) with an experiment-driven rollout plan.
+        </p>
+      </article>
+
+      <div class="footer">
+        <div>
+          <div><strong>Spotify PRD Case Study</strong></div>
+          <div class="small">© <span data-year></span> • Emma Vigy</div>
+        </div>
+        <div class="cta-row">
+          <a class="button" href="./research.html">← Research</a>
+          <a class="button primary" href="./index.html">Overview</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
